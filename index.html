@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Table Rounding</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="main.js"></script>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="/" class="home-link">▢</a>
+			<a href="">Table Rounding</a>
+		</h1>
+	</header>
+
+	<div id="app">
+		<textarea v-model.trim="input_text" placeholder="Paste your tab-delimited table here" rows="10" cols="50"></textarea>
+		<button @click="read_round_copy">Read, Round, and Copy to Clipboard</button>
+		<span v-if="sum !== null">Sum: {{ sum }}</span>
+	</div>
+</body>
+</html>
