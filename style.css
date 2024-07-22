@@ -1,36 +1,42 @@
 :root {
-	--bg_50: #fdfdfb;
-	--bg_100: #f6f5ef;
-	--bg_200: #efeee3;
-	--bg_300: #e9e6d7;
-	--bg_400: #e2dfcb;
-	--bg_500: #dcd8c0;
-	--bg_600: #b0ac99;
-	--bg_700: #848173;
-	--bg_800: #58564c;
-	--bg_900: #2b2b26;
+	--primary_50: #f4f5f6;
+	--primary_100: #ced2d4;
+	--primary_200: #a8afb3;
+	--primary_300: #828b91;
+	--primary_400: #5c6870;
+	--primary_500: #36454f;
+	--primary_600: #2b373f;
+	--primary_700: #20292f;
+	--primary_800: #151b1f;
+	--primary_900: #0a0d0f;
 
-	--primary_50: #f5f5f5;
-	--primary_100: #d2d1cf;
-	--primary_200: #afada9;
-	--primary_300: #8b8983;
-	--primary_400: #68655d;
-	--primary_500: #454138;
-	--primary_600: #37342c;
-	--primary_700: #292721;
-	--primary_800: #1b1a16;
-	--primary_900: #0d0c0b;
+	--bg_50: #fefefe;
+	--bg_100: #fbfbfa;
+	--bg_200: #f9f8f7;
+	--bg_300: #f6f5f4;
+	--bg_400: #f4f2f1;
+	--bg_500: #f2f0ee;
+	--bg_600: #c1c0be;
+	--bg_700: #91908e;
+	--bg_800: #60605f;
+	--bg_900: #302f2f;
 
-	--secondary_300: #c5bcf3;
-	--secondary_400: #b3a8ef;
-	--secondary_500: #a294ec;
-	--secondary_600: #8176bc;
+	--secondary_50: #f2f6f8;
+	--secondary_100: #c4d4de;
+	--secondary_200: #96b2c4;
+	--secondary_300: #6890ab;
+	--secondary_400: #3a6e91;
+	--secondary_500: #0d4d78;
+	--secondary_600: #0a3d60;
+	--secondary_700: #072e48;
+	--secondary_800: #051e30;
+	--secondary_900: #020f17;
 }
 
 html {
 	font-family: sans-serif;
-	background-color: var(--bg_100);
-	color: var(--primary_500);
+	background-color: var(--bg_500);
+	color: var(--primary_700);
 
 	& ::selection {
 		background-color: var(--primary_400);
@@ -43,12 +49,12 @@ html {
 
 	& body {
 		margin: 0;
-		padding: 2rem;
+		padding: 0;
 
 		& textarea {
-			background-color: var(--bg_50);
+			background-color: var(--bg_100);
 			color: var(--primary_600);
-			border: 1px solid var(--primary_300);
+			border: 1px solid var(--secondary_300);
 			outline: 0;
 			padding: 0.5rem;
 			border-radius: 4px;
@@ -56,17 +62,20 @@ html {
 		}
 
 		& textarea:hover {
-			border: 1px solid var(--primary_600);
+			border: 1px solid var(--primary_500);
 		}
 
 		& textarea:focus {
-			border: 1px solid var(--secondary_500);
+			border: 1px solid var(--secondary_300);
+			outline: 1px solid var(--secondary_300);
 		}
 	}
 }
 
 header {
-	margin-bottom: 1rem;
+	background-color: var(--primary_700);
+	color: var(--bg_200);
+	padding: 1rem;
 
 	& h1 {
 		margin: 0;
@@ -75,19 +84,18 @@ header {
 		& a {
 			text-decoration: none;
 			color: inherit;
-		}
-
-		& .home-link {
 			margin-right: 0.5rem;
 		}
 
-		& .home-link:hover {
-			color: var(--secondary_500);
+		& a:hover {
+			color: var(--secondary_300);
 		}
 	}
 }
 
 #app {
+	padding: 2rem;
+
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	max-width: max-content;
