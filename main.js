@@ -43,4 +43,4 @@ const app_config = {
 	}
 };
 
-createApp(app_config).mount('#app');
+createApp(app_config).mount("#app");
