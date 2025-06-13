@@ -1,25 +1,19 @@
 // main.js
 
 import { createApp } from "vue";
-import { sum, to_matrix, lr_round, prob_round } from "./utils.js";
-
-const algorithm_map = {
-	lr_round: lr_round,
-	prob_round: prob_round
-};
+import { sum, to_matrix } from "./utils.js";
+import AlgorithmSelector from "./components/algorithm-selector.js";
 
 const app_config = {
+	components: {
+		"algorithm-selector": AlgorithmSelector
+	},
 	data() {
 		return {
 			input_text: "",
-			algorithm: "lr_round",
+			rounding_function: null,
 			sum: null
 		};
-	},
-	computed: {
-		rounding_function() {
-			return algorithm_map[this.algorithm];
-		}
 	},
 	methods: {
 		read_round_copy() {

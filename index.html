@@ -25,11 +25,7 @@
 
 	<div id="app">
 		<textarea v-model.trim="input_text" placeholder="Paste your tab-delimited table here" rows="10" cols="50"></textarea>
-		<div class="options">
-			<h3>Rounding alrorithm:</h3>
-			<label title="Distributes leftover total to values with the largest decimal parts"><input type="radio" value="lr_round" v-model="algorithm">Largest Remainder Rounding</label>
-			<label title="Distributes leftover total randomly, giving higher chances to values with larger decimal parts"><input type="radio" value="prob_round" v-model="algorithm">Probabilistic Rounding</label>
-		</div>
+		<algorithm-selector v-model:rounding_function="rounding_function"></algorithm-selector>
 		<button @click="read_round_copy">Read, Round, and Copy to Clipboard</button>
 		<span v-if="sum !== null">Sum: {{ sum }}</span>
 	</div>
