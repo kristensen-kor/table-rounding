@@ -28,21 +28,31 @@ header {
 	padding: 2rem;
 
 	display: grid;
-	grid-template-columns: 2fr 1fr auto;
-	max-width: max-content;
+	grid-template-areas:
+		"text text text options"
+		"text text text options"
+		"button button sum .";
+	grid-template-columns: 1fr 1fr 1fr auto;
 	gap: 1rem;
+	max-width: max-content;
 
 	& textarea {
-		grid-column: span 2;
+		grid-area: text;
+	}
+
+	& button {
+		grid-area: button;
 	}
 
 	& .options {
+		grid-area: options;
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
 	}
 
 	& span {
+		grid-area: sum;
 		justify-self: end;
 	}
 }

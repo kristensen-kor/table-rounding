@@ -6,7 +6,7 @@ import AlgorithmSelector from "./components/algorithm-selector.js";
 
 const app_config = {
 	components: {
-		"algorithm-selector": AlgorithmSelector
+		AlgorithmSelector
 	},
 	data() {
 		return {
