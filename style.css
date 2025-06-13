@@ -28,12 +28,18 @@ header {
 	padding: 2rem;
 
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 2fr 1fr auto;
 	max-width: max-content;
 	gap: 1rem;
 
 	& textarea {
 		grid-column: span 2;
+	}
+
+	& .options {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
 	}
 
 	& span {
