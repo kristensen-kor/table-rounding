@@ -10,14 +10,20 @@ Table Rounding is a lightweight, browser-based tool that rounds a table of numbe
 
 ## ✨ Features
 
-- **Accurate Rounding:** Uses the largest remainder method to ensure the sum of rounded numbers remains consistent.
+- **Accurate Rounding:** Supports multiple rounding methods to ensure the sum of rounded numbers remains consistent:
+  - **Largest Remainder Rounding:** Distributes leftover total to values with the largest decimal parts.
+  - **Probabilistic Rounding:** Distributes leftover total randomly, favoring values with larger decimal parts.
 - **Simple Input:** Paste your tab-delimited table into the text area.
 - **Instant Processing:** Click a button to round the table and automatically copy the result to your clipboard.
 - **No Installation Needed:** Runs directly in your browser.
 
+
+
 ## 🛠️ Built With
 
-- **Vue.js** (lightweight, modern framework for reactive UI)
+- **Vue 3** with a build-free architecture using native ES modules and import maps.
+- Served as static files (e.g., via GitHub Pages) with no bundler, compiler, or server-side logic.
+- All logic runs client-side in the browser, making the app lightweight, fast to load, and easy to maintain without a toolchain.
 
 ---
 
@@ -27,10 +33,13 @@ Table Rounding is a lightweight, browser-based tool that rounds a table of numbe
 2. **Paste your data** into the text area.
    - Input should be tab-delimited (e.g., copied from Excel or a CSV file).
    - The app automatically replaces commas with dots if needed.
-3. **Click the button**: "Read, Round, and Copy to Clipboard".
-4. **View the rounded table**: Your data will be updated in the text area.
-5. **Your data is copied**: The rounded table is automatically copied to your clipboard.
-6. **Paste the rounded data** into your document, spreadsheet, or report.
+3. **Select the rounding algorithm** from the available options:
+   * **Largest Remainder Rounding** (Default)
+   * **Probabilistic Rounding**
+4. **Click the button**: "Read, Round, and Copy to Clipboard".
+5. **View the rounded table**: Your data will be updated in the text area.
+6. **Your data is copied**: The rounded table is automatically copied to your clipboard.
+7. **Paste the rounded data** into your document, spreadsheet, or report.
 
 ### Example Input:
 
